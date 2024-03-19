@@ -78,7 +78,7 @@ https://templatemo.com/tm-559-zay-shop
                             <a class="nav-link" href="<?php echo BASE_URL . '/principal/about' ?>">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo BASE_URL . 'principal/shop' ?>">Tenda</a>
+                            <a class="nav-link" href="<?php echo BASE_URL . 'principal/shop' ?>">Tienda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo BASE_URL . 'principal/contact' ?>">Contactos</a>
@@ -106,7 +106,7 @@ https://templatemo.com/tm-559-zay-shop
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark" id = "btnCantidadDeseo">0</span>
                     </a>
                     
-                    <a class="nav-icon position-relative text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">
+                    <a class="nav-icon position-relative text-decoration-none" href="#" id="btnModalLogin">
                         <i class="fas fa-fw fa-user text-dark mr-3"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                     </a>

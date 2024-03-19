@@ -39,11 +39,10 @@
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">Proident occaecat</h1>
-                                <h3 class="h2">Aliquip ex ea commodo consequat</h3>
+                                <h1 class="h1">¡Bienvenido a nuestra tienda en línea!</h1>
+                                <h3 class="h2">Descubre una amplia gama de productos de alta calidad cuidadosamente seleccionados para satisfacer tus necesidades y gustos. </h3>
                                 <p>
-                                    You are permitted to use this Zay CSS template for your commercial websites. 
-                                    You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.
+                                    <strong></strong> Explora nuestras colecciones y encuentra lo que estás buscando. Ya sea que necesites renovar tu guardarropa, mejorar tu hogar o buscar el regalo perfecto, tenemos algo para todos.
                                 </p>
                             </div>
                         </div>
@@ -107,7 +106,7 @@
 
     <!-- Start Featured Product -->
     <section class="bg-light">
-        <div class="container py-5">
+        <div class="container py-5"z>
             <div class="row text-center py-3">
                 <div class="col-lg-3 m-auto">
                     <h1 class="h1">Featured Product</h1>
