@@ -32,7 +32,7 @@
                     <?php if (!empty($_SESSION['correoCliente'])) { ?>
                         <a href="<?php echo BASE_URL . 'clientes'; ?>" class="btn btn-primary">Procesar Pedido</a>
                     <?php } else { ?>
-                        <a href="#" class="btn btn-primary" onclick="abrirModalLogin();">Login</a>
+                        <a href="#" class="btn btn-outline-primary" onclick="abrirModalLogin();">Login</a>
                     <?php } ?>
                 </div>
             </div>

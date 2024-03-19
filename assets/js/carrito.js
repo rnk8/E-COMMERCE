@@ -6,7 +6,7 @@ const verCarrito = document.querySelector('#verCarrito')
 const tableListaCarrito = document.querySelector('#tableListaCarrito tbody')
 
 let listaDeseo, listaCarrito;
-var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+const myModal = new bootstrap.Modal(document.getElementById('myModal'));
 
 document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("listaDeseo") != null) {

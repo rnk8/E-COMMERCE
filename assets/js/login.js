@@ -11,9 +11,9 @@ const correoRegistro = document.querySelector("#correoRegistro");
 const correoLogin = document.querySelector("#correoLogin");
 const claveLogin = document.querySelector("#claveLogin");
 
-const btnModalLogin = document.querySelector("#btnModalLogin");
 
-const modalLogin= new bootstrap.Modal(document.getElementById('modalLogin'));
+
+const modalLogin = new bootstrap.Modal(document.getElementById("modalLogin"));
 
 document.addEventListener("DOMContentLoaded", function () {
   btnRegistrarse.addEventListener("click", function () {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     }
   });
-  
+
   //login Directo
   login.addEventListener("click", function () {
     if (correoLogin.value == "" || claveLogin.value == "") {
@@ -84,24 +84,25 @@ document.addEventListener("DOMContentLoaded", function () {
       http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
           console.log(this.responseText);
-          //   const res = JSON.parse(this.responseText);
-          //   Swal.fire({
-          //     title: "Aviso",
-          //     text: res.msg,
-          //     icon: res.icono, // Aquí se especifica el tipo de alerta (success o error)
-          //   });
-          //   if (res.icono == "success") {
-          //   }
+          const res = JSON.parse(this.responseText);
+          Swal.fire({
+            title: "Aviso",
+            text: res.msg,
+            icon: res.icono, // Aquí se especifica el tipo de alerta (success o error)
+          });
+          if (res.icono == "success") {
+           
+            setTimeout(() => {
+              window.location.reload();
+            }, 2000);
+          }
         }
       };
     }
   });
 
-
   //btnModalLogin
-  btnModalLogin.addEventListener('click', function name() {
-    modalLogin.show();
-  })
+  
 });
 
 function enviarCorreo(correo, token) {
@@ -130,14 +131,11 @@ function enviarCorreo(correo, token) {
   };
 }
 
-
-
 function abrirModalLogin() {
-    // Ocultar el modal `myModal` si está definido
-   
-    myModal.hide();
-    
+  // Ocultar el modal `myModal` si está definido
 
-    // Mostrar el modal `modalLogin`
-    modalLogin.show();
+  myModal.hide();
+
+  // Mostrar el modal `modalLogin`
+  modalLogin.show();
 }

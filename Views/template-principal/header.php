@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> <?php echo TITLE . '-' .$data ['title'] ?></title>
+    <title> <?php echo TITLE . '-' . $data['title'] ?></title>
 
     <link rel="apple-touch-icon" sizes="180x180" href=" <?php echo BASE_URL; ?>assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo BASE_URL; ?>assets/img/favicon-32x32.png">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="<?php echo BASE_URL . 'assets/css/fontawesome.min.css'; ?> ">
     <link rel="stylesheet" href="<?php echo BASE_URL . 'assets/css/slick.min.css'; ?> ">
-    <link rel="stylesheet" href="<?php echo BASE_URL . 'assets/css/slick-theme.min.css'; ?> ">  
+    <link rel="stylesheet" href="<?php echo BASE_URL . 'assets/css/slick-theme.min.css'; ?> ">
     <!--
     
 TemplateMo 559 Zay Shop
@@ -99,17 +99,25 @@ https://templatemo.com/tm-559-zay-shop
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="#" id="verCarrito">
                         <i class="fas fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark" id= "btnCantidadCarrito">0</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark" id="btnCantidadCarrito">0</span>
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="<?php echo BASE_URL . 'principal/deseos' ?> ">
                         <i class="fas fa-fw fa-heart text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark" id = "btnCantidadDeseo">0</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark" id="btnCantidadDeseo">0</span>
+
                     </a>
-                    
-                    <a class="nav-icon position-relative text-decoration-none" href="#" id="btnModalLogin">
+
+                    <?php if (!empty($_SESSION['correoCliente'])) { ?>
+
+                        <a class="nav-icon position-relative text-decoration-none" href="<?php echo BASE_URL . 'clientes' ?>" >
+                            <img class="img-thumbnail" alt="-LOGO-CLIENTE" src="<?php echo BASE_URL . 'assets/img/android-chrome-192x192.png' ?>" width="50">
+                        </a>
+                    <?php } else { ?>   
+                                     
+                    <a class="nav-icon position-relative text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">
                         <i class="fas fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                     </a>
+                    <?php } ?>
                 </div>
             </div>
 
@@ -133,4 +141,3 @@ https://templatemo.com/tm-559-zay-shop
             </form>
         </div>
     </div>
-
